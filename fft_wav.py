@@ -1,19 +1,9 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
 from __future__ import print_function
 import scipy.io.wavfile as wavfile
 import scipy
 import scipy.fftpack
 import numpy as np
 from matplotlib import pyplot as plt
-
-
-# In[13]:
-
 
 fs_rate, signal = wavfile.read('PATH_TO_FILE.wav')
 print ("Frequency sampling", fs_rate)
@@ -35,19 +25,11 @@ fft_freqs = np.array(freqs)
 freqs_side = freqs[range(int(N/2))] # one side frequency range
 fft_freqs_side = np.array(freqs_side)
 
-
-# In[14]:
-
-
 plt.subplot(111)
 p1 = plt.plot(t, signal, "g")
 plt.xlabel('Time')
 plt.ylabel('Amplitude')
 plt.show()
-
-
-# In[15]:
-
 
 plt.subplot(111)
 p2 = plt.plot(freqs, FFT, "r") # plotting the complete fft spectrum
@@ -55,19 +37,10 @@ plt.xlabel('Frequency (Hz)')
 plt.ylabel('Count dbl-sided')
 plt.show()
 
-
-# In[16]:
-
-
 plt.subplot(111)
 p3 = plt.plot(freqs_side, abs(FFT_side), "b") # plotting the positive fft spectrum
 plt.xlabel('Frequency (Hz)')
 plt.ylabel('Count single-sided')
 plt.show()
-
-
-# In[ ]:
-
-
 
 
