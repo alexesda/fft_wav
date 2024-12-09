@@ -15,7 +15,7 @@ from matplotlib import pyplot as plt
 # In[13]:
 
 
-fs_rate, signal = wavfile.read('C:/Users/Alexander/Music/Moter_single.wav')
+fs_rate, signal = wavfile.read('PATH_TO_FILE.wav')
 print ("Frequency sampling", fs_rate)
 l_audio = len(signal.shape)
 print ("Channels", l_audio)
